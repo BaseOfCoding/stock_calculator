@@ -1,5 +1,40 @@
+import React from 'react';
+
 function StockProfit() {
-  return <h1>HELLO</h1>;
+  return (
+    <div>
+      <h1>HELLO</h1>
+      <h1>HELLO</h1>
+      <h1>HELLO</h1>
+      <h1>HELLO</h1>
+      <h1>HELLO</h1>
+      <h1>HELLO</h1>
+      <h1>HELLO</h1>
+      <h1>HELLO</h1>
+      <h1>HELLO</h1>
+      <h1>HELLO</h1>
+      <h1>HELLO</h1>
+      <h1>HELLO</h1>
+      <h1>HELLO</h1>
+      <h1>HELLO</h1>
+      <h1>HELLO</h1>
+      <h1>HELLO</h1>
+      <h1>HELLO</h1>
+      <h1>HELLO</h1>
+      <h1>HELLO</h1>
+      <h1>HELLO</h1>
+      <h1>HELLO</h1>
+      <h1>HELLO</h1>
+      <h1>HELLO</h1>
+      <h1>HELLO</h1>
+      <h1>HELLO</h1>
+      <h1>HELLO</h1>
+      <h1>HELLO</h1>
+      <h1>HELLO</h1>
+      <h1>HELLO</h1>
+      <h1>HELLO</h1>
+    </div>
+  );
 }
 
 export default StockProfit;

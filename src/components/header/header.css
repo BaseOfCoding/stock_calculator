@@ -1,0 +1,112 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lightgreen;
+  padding: 8px 12px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.header_logo {
+  font-size: 24px;
+  color: white;
+}
+
+.header_logo i {
+  padding-left: 4px;
+  color: black;
+}
+
+.header_logo span {
+  padding-left: 10px;
+  font-weight: 800;
+}
+
+.header_menu {
+  display: flex;
+  list-style: none;
+  padding-left: 0px;
+}
+
+.header_menu li {
+  padding: 8px 12px;
+}
+
+.header_menu li:hover {
+  background-color: violet;
+  border-radius: 4px;
+}
+
+.header_icons {
+  list-style: none;
+  color: white;
+  display: flex;
+  padding-left: 0;
+}
+
+.header_icons :hover {
+  background-color: blueviolet;
+  border-radius: 4px;
+}
+
+.header_icons li {
+  padding: 8px 12px;
+}
+
+.header_icons span {
+  margin-right: 8px;
+}
+
+.header_toogleButton {
+  display: none;
+  position: absolute;
+  right: 32px;
+  font-size: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 24px;
+  }
+
+  .header_menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .header_menu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .header_menu li :hover {
+    width: 100%;
+  }
+
+  .header_icons {
+    display: none;
+    justify-content: center;
+    width: 100%;
+    margin-top: -5px;
+  }
+
+  .header_toogleButton {
+    display: block;
+  }
+
+  .header_menu.active {
+    display: flex;
+  }
+
+  .header_icons.active {
+    display: flex;
+  }
+}
