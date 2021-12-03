@@ -7,16 +7,19 @@ import Header from './components/header/header';
 
 function App() {
   return (
-    <div id="header">
-      <Header>
-        <div id="body">
-          <Switch>
-            <Redirect exact path="/" to="/stockavarage" />
-            <Route path="/stockavarage" component={StockAvarage} />
-            <Route path="/stockprofit" component={StockProfit} />
-          </Switch>
-        </div>
-      </Header>
+    <div>
+      <Header />
+      <div id="body">
+        <Switch>
+          <Redirect exact path="/" to="/stockavarage" />
+          <Route path="/stockavarage" component={StockAvarage} />
+          <Route path="/stockprofit" component={StockProfit} />
+        </Switch>
+      </div>
+      <div id="footer">
+        <span className="footer-made-name">Since 2021 developer : Jeong min Lee</span>
+        <span className="footer-contact-us">Contact US : jmboc.0501@gmail.com</span>
+      </div>
     </div>
   );
 }

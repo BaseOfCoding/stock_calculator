@@ -11,7 +11,7 @@ class ReactReference {
   }
 }
 
-function Header(props: any) {
+const Header = () => {
   let clicked = false;
   const menu = new ReactReference().menuRef;
   const icons = new ReactReference().iconsRef;
@@ -27,10 +27,12 @@ function Header(props: any) {
   return (
     <div>
       <div className="header">
-        <div className="header_logo">
-          <i className="fas fa-calculator"></i>
-          <span>주식 계산기</span>
-        </div>
+        <Link to="/">
+          <div className="header_logo">
+            <i className="fas fa-calculator"></i>
+            <span>주식 계산기</span>
+          </div>
+        </Link>
         <ul className="header_menu" ref={menu}>
           <Link to="/">
             <li>Home</li>
@@ -62,6 +64,6 @@ function Header(props: any) {
       </div>
     </div>
   );
-}
+};
 
 export default Header;

@@ -1,24 +1,31 @@
+:root {
+  --main_color: #606060;
+  --sub_color: #d6ed17;
+  --hover_color: #422057;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: lightgreen;
+  background-color: var(--main_color);
   padding: 8px 12px;
 }
 
 a {
   text-decoration: none;
-  color: white;
+  color: var(--sub_color);
+  font-weight: 600;
 }
 
 .header_logo {
   font-size: 24px;
-  color: white;
+  color: var(--sub_color);
 }
 
 .header_logo i {
   padding-left: 4px;
-  color: black;
+  color: white;
 }
 
 .header_logo span {
@@ -37,7 +44,7 @@ a {
 }
 
 .header_menu li:hover {
-  background-color: violet;
+  background-color: var(--hover_color);
   border-radius: 4px;
 }
 
@@ -49,7 +56,7 @@ a {
 }
 
 .header_icons :hover {
-  background-color: blueviolet;
+  background-color: var(--hover_color);
   border-radius: 4px;
 }
 
