@@ -1,0 +1,102 @@
+:root {
+  --side_color: #50586c;
+  --center_color: #dce2f0;
+  --current_stock_box_color: orange;
+  --buy_stock_box_color: green;
+}
+
+/* pc variable */
+
+.body {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.side {
+  background-color: var(--side_color);
+  min-height: 100vh;
+  position: relative;
+  width: 20%;
+}
+
+.center {
+  background-color: var(--center_color);
+  min-height: 100vh;
+  position: relative;
+  width: 60%;
+}
+
+.title {
+  display: flex;
+  width: 260px;
+  height: 30px;
+  background-color: #80808067;
+  margin: 10px 15px;
+  align-items: center;
+}
+
+.title > i {
+  font-size: 22px;
+  padding-left: 6px;
+  padding-right: 10px;
+  color: #00000099;
+}
+
+.stock-box {
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+  margin: 10px 10px;
+  margin-top: 20px;
+}
+
+.stock-box > h3 {
+  margin: 10px 10px;
+}
+
+.stock-box > .stock-box-child {
+  display: flex;
+}
+
+.stock-box > .stock-box-child > .input-group {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  margin: 5px 5px;
+}
+
+.stock-box > .stock-box-child > .input-group > input {
+  width: 90%;
+  height: 25px;
+}
+
+.stock-box > .stock-box-child > .input-group > div {
+  margin-left: 5px;
+}
+
+.stock-box > .input-group-allPrice {
+  margin: 5px 5px;
+  display: flex;
+  align-items: center;
+}
+
+.stock-box > .input-group-allPrice > input {
+  width: 95%;
+  height: 25px;
+}
+
+.stock-box > .input-group-allPrice > div {
+  margin-left: 5px;
+}
+/* mobile variable */
+
+@media screen and (max-width: 768px) {
+  .side {
+    width: 2%;
+  }
+
+  .center {
+    width: 96%;
+  }
+}

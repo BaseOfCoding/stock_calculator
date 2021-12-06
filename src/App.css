@@ -1,71 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+} /* 모든 태그의 margin과 padding을 0으로 한다. 그리고 줄 간격을 기본 간격으로 설정한다. */
+
 body {
   margin: 0;
   font-family: 'Nanum Gothic', sans-serif;
-}
+} /* margin을 0으로 설정하고, 폰트는 나눔고딕으로 사용한다. */
 
 #body {
   min-height: 100vh;
-  width: 100%;
-  max-width: 1024px;
+  max-width: 4048px;
   margin: 0 auto;
-  padding-bottom: 24px;
-}
+} /* id를 body로 사용하는 태그의 최소 높이를 100vh, 최대 넓이를 4048 픽셀로 설정한다. */
 
 #footer {
   height: 100px;
-  background-color: gray;
+  background-color: #606060;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+/* id를 footer로 사용하는 하단 부분,
+   높이는 100px로 설정하고 background-color는, #606060 color로 하고
+   flex를 사용해서, flex 방향을, column(열)로, align-items와 justify-content를 center로 설정해서,
+   세로로 가운데 정렬 한 모습으로 보여주게 한다. */
 
 #footer > .footer-made-name {
   font-size: 12px;
   font-weight: 600;
-}
+} /* 만든 개발자의 이름에 대한 속성: 폰트 사이즈는 12px, 굵기를 600으로 설정 */
 
 #footer > .footer-contact-us {
   padding-top: 5px;
   font-size: 14px;
   font-weight: 700;
-}
-
-/* .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
+} /* 만든 개발자의 이메일에 대한 속성 : padding-top을 5px로 해서 어느 정도 위,아래 간격을 주게하고, 폰트 사이즈는 14px, 굵기는 700으로 설정 */
