@@ -4,7 +4,6 @@
   --current_stock_box_color: orange;
   --buy_stock_box_color: green;
 }
-
 /* pc variable */
 
 .body {
@@ -89,6 +88,23 @@
 .stock-box > .input-group-allPrice > div {
   margin-left: 5px;
 }
+
+.help {
+  margin: 30px 15px;
+}
+
+.help > span > a {
+  color: blue;
+}
+
+.input-group > input {
+  text-align: right;
+}
+
+.input-group-allPrice > input {
+  text-align: right;
+}
+
 /* mobile variable */
 
 @media screen and (max-width: 768px) {

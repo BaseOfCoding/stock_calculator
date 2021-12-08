@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  line-height: normal;
+  line-height: 1.4;
 } /* 모든 태그의 margin과 padding을 0으로 한다. 그리고 줄 간격을 기본 간격으로 설정한다. */
 
 body {
