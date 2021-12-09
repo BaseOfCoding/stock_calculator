@@ -1,6 +1,4 @@
-import { useCallback, useState } from 'react';
-
-function inputAutoComma(targetValue: string): string {
+export function inputAutoComma(targetValue: string): string {
   var number = targetValue;
   var integer = targetValue;
   var point = number.indexOf('.');
@@ -81,15 +79,3 @@ function inputDecimalPointMoreTwo(str: string): string {
     return 'Y';
   }
 }
-
-const useInputComma = (initialData: string): [string, (e: any) => void, boolean] => {
-  const [value, setValue] = useState(initialData);
-  const [boolValue, setBoolValue] = useState(false);
-  const handler = useCallback((e) => {
-    setValue(inputAutoComma(e.target.value));
-    e.target.value < 1 ? setBoolValue(false) : setBoolValue(true);
-  }, []);
-  return [value, handler, boolValue];
-};
-
-export default useInputComma;

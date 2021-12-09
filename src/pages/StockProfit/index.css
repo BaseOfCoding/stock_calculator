@@ -1,0 +1,117 @@
+:root {
+  --side_color: #50586c;
+  --center_color: #dce2f0;
+}
+/* pc variable */
+
+.stock-profit-body {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.stock-profit-side {
+  background-color: var(--side_color);
+  min-height: 100vh;
+  position: relative;
+  width: 20%;
+}
+
+.stock-profit-center {
+  background-color: var(--center_color);
+  min-height: 100vh;
+  position: relative;
+  width: 60%;
+}
+
+.stock-profit-title {
+  display: flex;
+  width: 260px;
+  height: 30px;
+  background-color: #80808067;
+  margin: 10px 15px;
+  align-items: center;
+}
+
+.stock-profit-title > i {
+  font-size: 22px;
+  padding-left: 6px;
+  padding-right: 10px;
+  color: #00000099;
+}
+
+.stock-profit-help {
+  margin: 30px 15px;
+}
+
+.stock-profit-help > span > a {
+  color: blue;
+}
+
+/*
+.stock-avg-stock-box {
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+  margin: 10px 10px;
+  margin-top: 20px;
+}
+
+.stock-avg-stock-box > h3 {
+  margin: 10px 10px;
+}
+
+.stock-avg-stock-box > .stock-avg-stock-box-child {
+  display: flex;
+}
+
+.stock-avg-stock-box > .stock-avg-stock-box-child > .stock-avg-input-group {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  margin: 5px 5px;
+}
+
+.stock-avg-stock-box > .stock-avg-stock-box-child > .stock-avg-input-group > input {
+  width: 90%;
+  height: 25px;
+}
+
+.stock-avg-stock-box > .stock-avg-stock-box-child > .stock-avg-input-group > div {
+  margin-left: 5px;
+}
+
+.stock-avg-stock-box > .stock-avg-input-group-allPrice {
+  margin: 5px 5px;
+  display: flex;
+  align-items: center;
+}
+
+.stock-avg-stock-box > .stock-avg-input-group-allPrice > input {
+  width: 95%;
+  height: 25px;
+}
+
+.stock-avg-stock-box > .stock-avg-input-group-allPrice > div {
+  margin-left: 5px;
+}
+
+.stock-avg-input-group > input {
+  text-align: right;
+}
+
+.stock-avg-input-group-allPrice > input {
+  text-align: right;
+}
+
+/* mobile variable */
+
+@media screen and (max-width: 768px) {
+  .stock-avg-side {
+    width: 2%;
+  }
+
+  .stock-avg-center {
+    width: 96%;
+  }
+}
