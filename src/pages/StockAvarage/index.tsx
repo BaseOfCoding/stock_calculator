@@ -1,6 +1,5 @@
 import '../StockAvarage/index.css';
 import { Link } from 'react-router-dom';
-import Update from 'src/components/update/update';
 import useInputComma from 'src/hooks/useInputComma';
 import { inputAutoComma } from 'src/utils/inputAutoComma';
 
@@ -10,7 +9,7 @@ type STOCK_STYLE = {
 
 const StockAvarage = () => {
   // variable
-  let stock_style: STOCK_STYLE;
+  let box_style: STOCK_STYLE;
 
   const [current_avg_price, setCurrentAvgPrice, current_avg_inputed] = useInputComma('');
   const [current_stock, setCurrentStock, current_stock_inputed] = useInputComma('');
@@ -28,8 +27,8 @@ const StockAvarage = () => {
 
   if (current_avg_inputed && current_stock_inputed && buy_avg_inputed && buy_stock_inputed) {
     final_result_avg_price = ResultAvgCalculateAndComma(current_avg_price, buy_avg_price);
-    final_result_stock = ResultAvgCalculateAndComma(current_stock, buy_stock);
-    final_result_price = ResultAvgCalculateAndComma(current_result_price, buy_result_price);
+    final_result_stock = ResultAvgCalculateAndComma(current_stock, buy_stock, false);
+    final_result_price = ResultAvgCalculateAndComma(current_result_price, buy_result_price, false);
   } else {
     final_result_avg_price = final_result_price = final_result_stock = '';
   }
@@ -42,7 +41,7 @@ const StockAvarage = () => {
           <Title />
 
           {/* current_stock ( 현재 평단가 그룹 ) */}
-          <div style={(stock_style = { background: 'orange' })} className="stock-avg-stock-box">
+          <div style={(box_style = { background: '#e3b448' })} className="stock-avg-stock-box">
             <h3>현재 평단가</h3>
             <div className="stock-avg-stock-box-child">
               <div className="stock-avg-input-group">
@@ -73,7 +72,7 @@ const StockAvarage = () => {
           </div>
 
           {/* buy_stock ( 구매 평단가 그룹 ) */}
-          <div style={(stock_style = { background: 'green' })} className="stock-avg-stock-box">
+          <div style={(box_style = { background: '#cbd18f' })} className="stock-avg-stock-box">
             <h3>구매 평단가</h3>
             <div className="stock-avg-stock-box-child">
               <div className="stock-avg-input-group">
@@ -104,7 +103,7 @@ const StockAvarage = () => {
           </div>
 
           {/* result_stock ( 최종 평단가 그룹 ) */}
-          <div style={(stock_style = { background: 'skyblue' })} className="stock-avg-stock-box">
+          <div style={(box_style = { background: '#3a6b35' })} className="stock-avg-stock-box">
             <h3>최종 평단가</h3>
             <div className="stock-avg-stock-box-child">
               <div className="stock-avg-input-group">
@@ -127,7 +126,6 @@ const StockAvarage = () => {
               <div>원</div>
             </div>
           </div>
-          <Update />
         </div>
         <div className="stock-avg-side" />
       </div>
@@ -163,8 +161,16 @@ const EachAvgCalculateAndComma = (temp_avg_price: string, temp_stock: string): s
   return inputAutoComma(temp_current_result_price.toString());
 };
 
-const ResultAvgCalculateAndComma = (temp_avg_price: string, temp_stock: string): string => {
-  var temp_current_result_price = Number(temp_avg_price.replace(/,/g, '')) + Number(temp_stock.replace(/,/g, ''));
+const ResultAvgCalculateAndComma = (temp_avg_price: string, temp_stock: string, avg: boolean = true): string => {
+  var temp_current_result_price;
+  if (avg == true) {
+    temp_current_result_price = (
+      (Number(temp_avg_price.replace(/,/g, '')) + Number(temp_stock.replace(/,/g, ''))) *
+      0.5
+    ).toFixed(1);
+  } else {
+    temp_current_result_price = Number(temp_avg_price.replace(/,/g, '')) + Number(temp_stock.replace(/,/g, ''));
+  }
   return inputAutoComma(temp_current_result_price.toString());
 };
 

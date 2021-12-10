@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import StockAvarage from './pages/StockAvarage';
 import StockProfit from './pages/StockProfit';
+import Home from './pages/Home';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import Header from './components/header/header';
 
@@ -12,7 +13,8 @@ function App() {
       {/*div로 감싼 후, 먼저 Header 컴포넌트를 실행해서, 메뉴 헤더를 보이게 함. App.tsx에 많은 css가 보이면 가독성이 떨어지기에, Header는 Header로 따로 빼놓고 사용.*/}
       <div id="body">
         <Switch>
-          <Redirect exact path="/" to="/stockavarage" />
+          <Redirect exact path="/" to="/home" />
+          <Route exact path="/home" component={Home} />
           <Route exact path="/stockavarage" component={StockAvarage} />
           <Route exact path="/stockprofit" component={StockProfit} />
         </Switch>

@@ -4,6 +4,7 @@ export function inputAutoComma(targetValue: string): string {
   var point = number.indexOf('.');
   var decimal = '';
   var checked = '';
+  var sign = '';
 
   if (number.charAt(0) == '.') {
     alert('첫 번째 입력에선 소수점 기호를 사용하실 수 없습니다.');

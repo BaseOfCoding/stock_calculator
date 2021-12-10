@@ -1,0 +1,44 @@
+:root {
+  --side_color: #50586c;
+  --center_color: #dce2f0;
+}
+
+.home-body {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.home-side {
+  background-color: var(--side_color);
+  min-height: 100vh;
+  position: relative;
+  width: 20%;
+}
+
+.home-center {
+  background-color: var(--center_color);
+  min-height: 100vh;
+  position: relative;
+  width: 60%;
+}
+
+.home-introduction {
+  margin: 40px 10px;
+  text-align: center;
+}
+
+.home-introduction > span {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .home-side {
+    width: 2%;
+  }
+
+  .home-center {
+    width: 96%;
+  }
+}

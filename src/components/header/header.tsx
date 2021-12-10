@@ -37,7 +37,7 @@ const Header = () => {
           <Link to="/">
             <li>Home</li>
           </Link>
-          <Link to="/">
+          <Link to="/stockavarage">
             <li>평단 계산</li>
           </Link>
           <Link to="/stockprofit">

@@ -99,8 +99,18 @@
   text-align: right;
 }
 
+.stock-avg-input-group > input:disabled {
+  font-weight: 700;
+  background-color: #ffffffdd;
+}
+
 .stock-avg-input-group-allPrice > input {
   text-align: right;
+}
+
+.stock-avg-input-group-allPrice > input:disabled {
+  font-weight: 700;
+  background-color: #ffffffdd;
 }
 
 /* mobile variable */
