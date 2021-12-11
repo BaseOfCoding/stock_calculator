@@ -18,6 +18,7 @@ const Header = () => {
 
   const toogleButtonSetActive = () => {
     clicked = !clicked;
+    console.log(menu);
     if (clicked) {
       menu.current.classList.toggle('active');
       icons.current.classList.toggle('active');

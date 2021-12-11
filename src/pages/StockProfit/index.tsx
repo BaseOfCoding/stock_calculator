@@ -147,7 +147,7 @@ const Title = () => {
 };
 
 const getDomesticProfit = (stock: number, sell_price: number, avg_price: number, sign: string): string => {
-  return sign + inputAutoComma((stock * sell_price - stock * avg_price).toString());
+  return sign + inputAutoComma(Math.floor(stock * sell_price - stock * avg_price).toString());
 };
 
 const getOverseasProfit = (
@@ -164,8 +164,6 @@ const getOverseasProfit = (
   temp_sell_all_price = stock * sell_price * dollarData;
   temp_calculate_all_price = temp_sell_all_price - temp_avg_all_price;
 
-  console.log(dollarData);
-
   if (sign != '-' && temp_calculate_all_price > 2500000) {
     tex = '양도 소득세 포함 : ';
     temp_calculate_all_price -= temp_calculate_all_price * 0.22;
@@ -173,7 +171,7 @@ const getOverseasProfit = (
     tex = '';
   }
 
-  temp_overseas = tex + sign + inputAutoComma(temp_calculate_all_price.toString());
+  temp_overseas = tex + sign + inputAutoComma(Math.floor(temp_calculate_all_price).toString());
 
   return temp_overseas;
 };
