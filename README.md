@@ -3,7 +3,7 @@
 ---
 
 <div align="center">
-<img src="readmefolder/calculator-solid.svg" style="width: 64px; height: 64px;"/>
+<img src="readmefolder/calculator-solid.svg" style="color:white; width:64px; height:64px;"/>
 <br><br>
 </div>
 
