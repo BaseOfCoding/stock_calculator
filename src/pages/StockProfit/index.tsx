@@ -109,7 +109,7 @@ const StockProfit = () => {
               <input type="text" value={overseasProfit} disabled />
               <span>원</span>
             </div>
-            <div className="stock-profit-contents" style={{ color: '#ed3572' }}>
+            <div className="stock-profit-contents" style={{ color: '#ed3572', marginBottom: '10px' }}>
               수수료가 포함되어 있지 않기 때문에,
               <br />
               수익의 차이가 생길 수 있습니다.
@@ -166,7 +166,9 @@ const getOverseasProfit = (
 
   if (sign != '-' && temp_calculate_all_price > 2500000) {
     tex = '양도 소득세 포함 : ';
-    temp_calculate_all_price -= temp_calculate_all_price * 0.22;
+    let temp_tex_calc: number;
+    temp_tex_calc = (temp_calculate_all_price - 2500000) * 0.22;
+    temp_calculate_all_price -= temp_tex_calc;
   } else {
     tex = '';
   }
